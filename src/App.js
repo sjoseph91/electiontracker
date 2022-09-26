@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home"
+import {Route, Switch} from "react-router-dom";
+import Options from "./components/Options"
+import ByState from "./components/ByState"
+import LargestDonors from "./components/LargestDonors";
+import IndividualDonors from "./components/IndividualDonors"
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="app">
+          <Header />
+            <Switch>
+              <Route exact path="/">
+                  <Home />
+              </Route>
+              <Route  path="/options">
+                  <Options />
+              </Route>
+              <Route  path="/byState">
+                  <ByState />
+              </Route>
+              <Route  path="/largestDonors">
+                  <LargestDonors />
+              </Route>
+              <Route  path="/individualDonors">
+                  <IndividualDonors />
+              </Route>
+            </Switch>
+
+          <Footer />
+        </div>
+    
+      
+    
   );
 }
 
-export default App;
+export default App

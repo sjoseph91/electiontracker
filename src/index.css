@@ -1,13 +1,101 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.app{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  background-color: #4f4f4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-button a{
+  padding: 20px 30px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: blue;
+  border-radius: 10px;
+  font-size: 1.2rem;
+
+}
+main{
+  overflow: auto;
+  text-align: center;
+}
+
+footer{
+  background-color: #4f4f4f;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.images{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.biden-theme{
+  background: rgb(31, 31, 232);
+    background: linear-gradient(180deg, rgba(31, 31, 232, 0.3393558106836485) 1%, rgba(249, 249, 249, 1) 100%);
+}
+.trump-theme{
+  background: rgb(232, 31, 35);
+    background: linear-gradient(180deg, rgba(232, 31, 35, 0.8379552504595589) 1%, rgba(249, 249, 249, 1) 100%);
+}
+
+.options-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.options{
+  max-width: 200px;
+  min-width: 150px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 5px;
+}
+path {
+  pointer-events: all;
+}
+path:hover {
+  opacity: 0.50;
+  cursor: pointer;
+}
+.donor {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  max-width: 1000px;
+  background-color: white;
+  margin: 10px auto;
+  box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.donor *{
+  width: 30%;
+  padding: 5px;
 }
