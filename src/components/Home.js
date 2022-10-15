@@ -9,9 +9,9 @@ function Home(props){
   
     return (
         <main>
-            <h1> 2020 Presidential Election Financing </h1>
+            <h1> 2020 Presidential Election Financing Tracker </h1>
             <h2>The most expensive presidential race in history</h2>
-            <h4>Click a candidate to explore their finances</h4>
+            <h4>Click a candidate to explore their political contribution data</h4>
             <div className="images">
                 <Link to="/options" onClick={() =>handleClick("trump")}>
                     <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/220px-Donald_Trump_official_portrait.jpg" width="200px" alt="trump"></img>

@@ -16,15 +16,24 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.link-button a{
+.link-button a:link{
   padding: 20px 30px;
   color: white;
   text-decoration: none;
   cursor: pointer;
-  background-color: blue;
+  background-color: rgb(14, 14, 245);
   border-radius: 10px;
   font-size: 1.2rem;
+  line-height: 1.7;
+  transition: 0.2s;
+}
 
+
+.link-button a:hover {
+  background-color: rgb(53, 53, 255);
+}
+.link-button:active {
+  transform: scale(0.9);
 }
 main{
   overflow: auto;
@@ -46,10 +55,16 @@ a {
 }
 
 .images{
+  margin: 0 auto;
+  width: 80%;
   padding-top: 50px;
   display: flex;
   justify-content: space-evenly;
 
+}
+img:hover{
+  transform: scale(1.08);
+  transition: 0.2s;
 }
 .biden-theme{
   background: rgb(31, 31, 232);
@@ -76,6 +91,12 @@ a {
   justify-content: center;
   font-size: 24px;
   padding: 5px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.options:hover{
+  box-shadow: 3px 3px 5px black;
+  transform: scale(1.08);
 }
 path {
   pointer-events: all;
@@ -98,4 +119,37 @@ path:hover {
 .donor *{
   width: 30%;
   padding: 5px;
+}
+
+form{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form button{
+  align-self: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(31, 31, 232);
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+
+}
+label{
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+input{
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  text-indent: 3px;
+  font-family: inherit;
+  font-size: 100%;
+  margin-bottom: 10px;
 }

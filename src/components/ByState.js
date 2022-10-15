@@ -45,7 +45,10 @@ function ByState(props){
     return (
         <main className={`${candidate}-theme`}>
             <h2>Total spent in {selectedState} : {formatter.format(total)} </h2>
-            <USAMap onClick={mapHandler}/>
+            <USAMap 
+              onClick={mapHandler}
+              defaultFill="rgb(129,129,130)"
+             />
         </main>
     )
 }

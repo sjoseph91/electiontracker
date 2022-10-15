@@ -19,23 +19,28 @@ function IndividualDonors(props){
        .then(res => res.json())
        .then(res => {
         console.log(res);
-        const finalForm = res.results.map(obj => {
-            return {
-                    amount: obj.contribution_receipt_amount,
-                    city:obj.contributor_city,
-                    state: obj.contributor_state,
-                    fName: obj.contributor_first_name,
-                    lName: obj.contributor_last_name
-                    }
-        })
-        setDonorData(finalForm)
-        setLoading(false);
+        if (res.results.length > 0){
+            const finalForm = res.results.map(obj => {
+                return {
+                        amount: obj.contribution_receipt_amount,
+                        city:obj.contributor_city,
+                        state: obj.contributor_state,
+                        fName: obj.contributor_first_name,
+                        lName: obj.contributor_last_name
+                        }
+            })
+            setDonorData(finalForm)
+            setLoading(false);
+        }else{
+            setDonorData(null);
+            setLoading(false);
+        }
        })
        .catch(err => console.log(err))
     }
     
     const mappedResults = !donorData ? 
-    <h1>{!loading ? "Enter data to serach for indivdual donors": "Loading..."}</h1>  
+    <h1>{!loading ? "Enter data to search for indivdual donors": "Loading..."}</h1>  
     : donorData.map(donor => (
         <div key={Math.random()* 1000}className="donor">
             <p>{`${donor.fName} ${donor.lName}`}</p>
@@ -47,14 +52,20 @@ function IndividualDonors(props){
     return (
         <main className={`${candidate}-theme`}>
             <form name="form" onSubmit={handleSubmit}>
-                <label htmlFor="name">Name: </label>
-                <input type="text" name="name" id="name"></input>
-                <label htmlFor="state">State: </label>
-                <input type="option" name="state" id="state" required></input>
+                <div className="inputBox">
+                  <label htmlFor="name">Name: </label>
+                  <input type="text" name="name" id="name"></input>
+                </div>
+                <div className="inputBox">
+                  <label htmlFor="state" >State: </label>
+                  <input type="text" name="state" id="state" required placeholder='KY'></input>
+                </div>
+                
                 <button type="submit">Submit</button>
             </form>
             <div className="individuals">
                 {mappedResults}
+                {!donorData ? "No results found." : null}
             </div>
         </main>
     )
