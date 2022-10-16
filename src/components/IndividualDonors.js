@@ -18,7 +18,7 @@ function IndividualDonors(props){
        fetch(`${baseUrl}?api_key=${key}&committee_id=${committeeId}&contributor_name=${name.value}&two_year_transaction_period=2020&sort_hide_null=true&contributor_state=${state.value}&is_individual=true&contributor_type=individual&cycle=2020&per_page=10`)
        .then(res => res.json())
        .then(res => {
-        console.log(res);
+        console.log(res)
         if (res.results.length > 0){
             const finalForm = res.results.map(obj => {
                 return {
@@ -65,7 +65,7 @@ function IndividualDonors(props){
             </form>
             <div className="individuals">
                 {mappedResults}
-                {!donorData ? "No results found." : null}
+                {!donorData && !loading ? "No results found." : null}
             </div>
         </main>
     )
