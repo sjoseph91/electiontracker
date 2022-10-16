@@ -1,7 +1,7 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Header(props){
+function Header(props) {
     return (
         <nav>
             <div className="link-button">
@@ -11,4 +11,4 @@ function Header(props){
     )
 }
 
-export default Header;
+export default Header
