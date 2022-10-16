@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import { useContext, useEffect } from 'react'
 import CandidateContext from './CandidateContext'
 
@@ -7,7 +7,7 @@ function LargestDonors(props) {
     const committeeId = candidate === 'biden' ? 'C00703975' : 'C00580100'
     const key = '3fliVTZJiWlXYaXNOrwNbstJg3oe57UU7shZ166B'
     const baseUrl = 'https://api.open.fec.gov/v1/schedules/schedule_a/'
-    const [donorData, setDonorData] = React.useState(null)
+    const [donorData, setDonorData] = useState(null)
 
     useEffect(() => {
         fetch(

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useContext } from 'react'
 import CandidateContext from './CandidateContext'
 import { Link } from 'react-router-dom'

@@ -1,4 +1,4 @@
-import React from 'react'
+import { createContext } from 'react'
 
 const contextObj = {
     candidate: 'biden',
@@ -6,6 +6,6 @@ const contextObj = {
         contextObj.candidate = newCandidate
     },
 }
-const CandidateContext = React.createContext(contextObj)
+const CandidateContext = createContext(contextObj)
 
 export default CandidateContext
