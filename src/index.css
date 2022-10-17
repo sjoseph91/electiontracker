@@ -40,6 +40,11 @@ main{
   text-align: center;
 }
 
+.home{
+  background: rgb(232, 14, 14);
+  background: linear-gradient(90deg, rgba(232, 14, 14, 0.22452731092436973) 0%, rgba(85, 104, 238, 0.9640231092436975) 100%);
+}
+
 footer{
   background-color: #4f4f4f;
   color: white;

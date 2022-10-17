@@ -11,7 +11,7 @@ function ByState(props) {
 
     const [selectedState, setSelectedState] = useState(null)
     const [stateData, setStateData] = useState(null)
-    const [total, setTotal] = useState(null)
+    const [total, setTotal] = useState<number|null>(null)
 
     const mapHandler = (e) => {
         setSelectedState(e.target.dataset.name)
