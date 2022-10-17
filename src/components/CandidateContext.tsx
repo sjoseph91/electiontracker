@@ -1,8 +1,13 @@
 import { createContext } from 'react'
 
-const contextObj = {
+type CandidateContextType = {
+    candidate: string,
+    changeCandidate: (newCandidate: string) => void
+}
+
+const contextObj: CandidateContextType = {
     candidate: 'biden',
-    changeCandidate: (newCandidate: string) => {
+    changeCandidate: (newCandidate) => {
         contextObj.candidate = newCandidate
     },
 }

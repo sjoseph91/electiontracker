@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import CandidateContext from './CandidateContext'
 import { Link } from 'react-router-dom'
 
-function Options(props) {
+function Options() {
     const context = useContext(CandidateContext)
 
     return (

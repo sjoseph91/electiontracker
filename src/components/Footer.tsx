@@ -1,4 +1,4 @@
-function Footer(props) {
+function Footer() {
     return (
         <footer>
             <a href="https://github.com/fecgov/FEC/blob/master/TERMS-OF-SERVICE.md">
