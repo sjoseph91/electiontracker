@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/electiontracker/static/css/main.1fdfd714.css",
-    "main.js": "/electiontracker/static/js/main.e9dacc1c.js",
-    "index.html": "/electiontracker/index.html",
-    "main.1fdfd714.css.map": "/electiontracker/static/css/main.1fdfd714.css.map",
-    "main.e9dacc1c.js.map": "/electiontracker/static/js/main.e9dacc1c.js.map"
+    "main.css": "/static/css/main.1fdfd714.css",
+    "main.js": "/static/js/main.5367923b.js",
+    "index.html": "/index.html",
+    "main.1fdfd714.css.map": "/static/css/main.1fdfd714.css.map",
+    "main.5367923b.js.map": "/static/js/main.5367923b.js.map"
   },
   "entrypoints": [
     "static/css/main.1fdfd714.css",
-    "static/js/main.e9dacc1c.js"
+    "static/js/main.5367923b.js"
   ]
 }
