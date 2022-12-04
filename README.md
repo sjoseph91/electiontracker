@@ -12,3 +12,5 @@ Users can also search by name and state to search individual political donations
 -   HTML
 -   CSS
 -   JS
+
+### Free API may be a little slow when searching for individual donors...

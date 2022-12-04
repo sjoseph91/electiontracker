@@ -4,7 +4,8 @@ import CandidateContext from './CandidateContext'
 
 function IndividualDonors() {
     const { candidate } = useContext(CandidateContext)
-    const committeeId: string = candidate === 'biden' ? 'C00703975' : 'C00580100'
+    const committeeId: string =
+        candidate === 'biden' ? 'C00703975' : 'C00580100'
     const key: string = '3fliVTZJiWlXYaXNOrwNbstJg3oe57UU7shZ166B'
     const baseUrl: string = 'https://api.open.fec.gov/v1/schedules/schedule_a/'
     const [donorData, setDonorData] = useState(null)
@@ -13,20 +14,18 @@ function IndividualDonors() {
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         setLoading(true)
-        setDonorData(null);
+        setDonorData(null)
         const target = e.target as typeof e.target & {
-            name: HTMLInputElement,
+            name: HTMLInputElement
             state: HTMLInputElement
         }
         const { name, state } = target
-        
 
         fetch(
             `${baseUrl}?api_key=${key}&committee_id=${committeeId}&contributor_name=${name.value}&two_year_transaction_period=2020&sort_hide_null=true&contributor_state=${state.value}&is_individual=true&contributor_type=individual&cycle=2020&per_page=10`
         )
             .then((res) => res.json())
             .then((res) => {
-                console.log(res)
                 if (res.results.length > 0) {
                     const finalForm = res.results.map((obj) => {
                         return {
