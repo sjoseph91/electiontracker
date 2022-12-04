@@ -6,9 +6,9 @@ Users can also search by name and state to search individual political donations
 
 ## Technologies Used
 
-OpenFEC API
-TypeScript
-React-Router
-HTML
-CSS
-JS
+-   OpenFEC API
+-   TypeScript
+-   React-Router
+-   HTML
+-   CSS
+-   JS
