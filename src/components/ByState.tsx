@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import CandidateContext from './CandidateContext'
 import USAMap from 'react-usa-map'
+import * as React from 'react'
 
-function ByState(props) {
+function ByState() {
     const { candidate } = useContext(CandidateContext)
     const candidateId = candidate === 'biden' ? 'P80000722' : 'P80001571'
     const key = '3fliVTZJiWlXYaXNOrwNbstJg3oe57UU7shZ166B'
@@ -11,17 +12,22 @@ function ByState(props) {
 
     const [selectedState, setSelectedState] = useState(null)
     const [stateData, setStateData] = useState(null)
-    const [total, setTotal] = useState(null)
+    const [total, setTotal] = useState<number|null>(null)
 
-    const mapHandler = (e) => {
-        setSelectedState(e.target.dataset.name)
-        let targetObj = stateData.filter(
-            (obj) => obj.contribution_state === e.target.dataset.name
-        )
-        if (targetObj[0]) {
-            setTotal(targetObj[0].contribution_receipt_amount)
-        } else {
-            setTotal(null)
+    const mapHandler = (e: React.PointerEvent<SVGElement>) => {
+        const target = e.target as SVGElement
+        
+        if (target !== null){
+            setSelectedState(target.dataset.name)
+            let targetObj = stateData.filter(
+                (obj) => obj.contribution_state === target.dataset.name
+            )
+            if (targetObj[0]) {
+                setTotal(targetObj[0].contribution_receipt_amount)
+            } else {
+                setTotal(null)
+            }
+
         }
     }
     const formatter = new Intl.NumberFormat('en-US', {

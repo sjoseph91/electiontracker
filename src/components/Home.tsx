@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import CandidateContext from './CandidateContext'
-function Home(props) {
+function Home() {
     const { changeCandidate } = useContext(CandidateContext)
 
-    const handleClick = (person) => changeCandidate(person)
+    const handleClick = (person: string) => changeCandidate(person)
 
     return (
-        <main>
+        <main className='home'>
             <h1> 2020 Presidential Election Financing Tracker </h1>
             <h2>The most expensive presidential race in history</h2>
             <h4>
